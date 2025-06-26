@@ -26,7 +26,7 @@ h1 {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 4em;
     letter-spacing: 3px;
-    color: #5cc8d7ff;
+    color: #DF6589FF;
     margin: 0;
     margin-bottom: 20px;
 }
@@ -38,7 +38,7 @@ h1 {
     letter-spacing: 1px;
 }
 .go-home {
-    background: #5cc8d7ff;
+    background: #DF6589FF;
     border: 2px solid #ffffff;
     color: #ffffff;
     font-weight: 600;
@@ -59,10 +59,10 @@ h1 {
 }
 .go-home:hover {
     background: transparent;
-    border-color: #5cc8d7ff;
+    border-color: #DF6589FF;
 }
 a:hover .go-home {
-    color: #5cc8d7ff;
+    color: #DF6589FF;
 }
 .go-home a {
     text-decoration: none;

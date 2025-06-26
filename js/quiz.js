@@ -1,50 +1,51 @@
 const QUESTIONS = [
     {
-        label: 'What strategy do you use to maximize your gaming success?',
+        label: 'What approach do you use to improve your gaming performance?',
         answers: [
-            'I follow a strict gaming strategy that brings consistent rewards.',
-            'I adapt my strategies based on the game situation.',
-            'I rely on my intuition without a clear strategy.',
-            'I am still exploring my best gaming approach.',
+            'I follow a well-defined strategy tailored to each game.',
+            'I adjust my tactics depending on the current game scenario.',
+            'I mostly rely on my instincts without a fixed plan.',
+            'I am still experimenting to find my ideal gaming style.',
         ],
     },
     {
-        label: 'Which gaming analysis tools do you use and why?',
+        label: 'Which tools do you use for analyzing games and why?',
         answers: [
-            'Game mechanics analysis – it helps me optimize my playstyle.',
-            'Player behavior analysis – I study my opponents and trends.',
-            'Both methods, for a comprehensive approach.',
-            'I don’t use analysis – I count on luck and excitement.',
+            'I focus on understanding game mechanics to enhance my skills.',
+            'I analyze player behavior to anticipate opponents’ moves.',
+            'I combine both game mechanics and player analysis for deeper insight.',
+            'I prefer to play without formal analysis, enjoying the unpredictability.',
         ],
     },
     {
-        label: 'How do you handle emotional pressure during gaming sessions?',
+        label: 'How do you manage stress and focus during intense gaming sessions?',
         answers: [
-            'I stick to my game plan and manage my bankroll wisely.',
-            'Sometimes emotions take over, but I work on controlling them.',
-            'I often let emotions affect my gameplay decisions.',
-            'I don’t experience emotional pressure while gaming.',
+            'I maintain discipline and stick to my gaming routine.',
+            'Sometimes I feel pressured but work actively on staying calm.',
+            'My emotions occasionally influence my decisions in play.',
+            'I generally stay relaxed and unaffected by gaming pressure.',
         ],
     },
     {
-        label: 'How do you measure your gaming success?',
+        label: 'How do you evaluate your success in gaming?',
         answers: [
-            'By maintaining consistent winnings over time.',
-            'By the number of successful rounds I play.',
-            'By my total payouts over a set period.',
-            'I don’t track my success yet – I focus on the thrill of the game.',
+            'By consistently improving my gameplay and strategies.',
+            'By the number of matches or levels I complete successfully.',
+            'By reviewing my overall game performance and achievements.',
+            'I focus more on enjoyment rather than tracking outcomes.',
         ],
     },
     {
-        label: 'Do you have a structured gaming plan, and how strictly do you follow it?',
+        label: 'Do you plan your gaming sessions, and how strictly do you follow your plan?',
         answers: [
-            'I have a plan and always stick to it.',
-            'I have a plan, but sometimes I deviate from it.',
-            'I am developing my strategy but don’t have a solid plan yet.',
-            'I play without a fixed plan and go with the flow.',
+            'I create a detailed plan and adhere to it closely.',
+            'I have a plan but allow flexibility when needed.',
+            'I am developing a structured approach but it’s not fixed yet.',
+            'I prefer spontaneous gaming sessions without strict plans.',
         ],
     },
 ];
+
 
 const $container = document.getElementById('container');
 
@@ -57,9 +58,9 @@ const startStep = {
                     <img class="quiz-img" src="images/quiz.jpg">
                 </div>
                 <div class="col-lg-6 col-md-6 col-lg-6">
-                    <h2 class="title">Assess Your Gaming Skills</h2>
-                    <h3>Find out how well you understand strategy games, risk management, interactive gaming, and the thrill of virtual experience.</h3>
-                    <button class="btn btn-primary py-3 first-button" data-action="startQuiz">Start</button>
+                    <h2 class="title">Test Your Gaming Expertise</h2>
+                    <h3>Discover your knowledge of game mechanics, strategy development, competitive play, and immersive virtual worlds.</h3>
+                    <button class="btn btn-primary py-3 first-button" data-action="startQuiz">Begin Quiz</button>
                 </div>
             </div>
         </div>
@@ -133,22 +134,22 @@ const questionsStep = {
 const finalStep = {
     render: () => {
         $container.innerHTML = `
-        <div class="container quiz-wrapper">
+       <div class="container quiz-wrapper">
             <div class="row quiz-content">
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <h2 class="title">Game Skill Review</h2>
-                    <h3>Fill out the form to receive your free gaming strategy guide!</h3>
+                    <h2 class="title">Gaming Skills Assessment</h2>
+                    <h3>Complete the form to get your complimentary guide on game tactics and strategies!</h3>
                     <form>
-                        <input class="form-control" name="name" type="name" placeholder="Name" required>
-                        <input class="form-control" name="email" id="email2" type="email" placeholder="Email" required>
+                        <input class="form-control" name="name" type="text" placeholder="Your Name" required>
+                        <input class="form-control" name="email" id="email2" type="email" placeholder="Your Email" required>
                         <div id="validation" style="color: red"></div>
-                        <input class="form-control" name="phone" type="number" id="phone" step="0.01" placeholder="Phone Number" required>
+                        <input class="form-control" name="phone" type="tel" id="phone" placeholder="Contact Number" required>
                         
-                        <input name="strategyGaming" value="Gaming Strategy" hidden>
-                        <input name="riskManagement" value="Risk Management" hidden>
-                        <input name="interactiveGaming" value="Interactive Gaming" hidden>
-                        <input name="virtualExperience" value="Virtual Experience" hidden>
-                        <input name="highStakesEntertainment" value="High-Stakes Entertainment" hidden>
+                        <input name="gameMechanics" value="Game Mechanics" hidden>
+                        <input name="strategyDevelopment" value="Strategy Development" hidden>
+                        <input name="competitivePlay" value="Competitive Play" hidden>
+                        <input name="virtualWorlds" value="Virtual Worlds" hidden>
+                        <input name="gameAnalysis" value="Game Analysis" hidden>
                         
                         <button data-action="submitAnswers" class="btn btn-primary w-50 py-3">Submit</button>
                     </form>
@@ -158,6 +159,7 @@ const finalStep = {
                 </div>
             </div>
         </div>
+
         `;
     },
     onClick: (el) => {
